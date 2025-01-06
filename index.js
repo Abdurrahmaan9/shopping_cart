@@ -4,7 +4,7 @@ if (document.readyState == 'loading'){
     ready()
 }
 
-// Code t run if the DOM contents have completed loading
+// Code to run if the DOM contents have completed loading
 function ready(){
     let removeCartItemButton = document.getElementsByClassName('btn-danger')
     for (let i = 0; i < removeCartItemButton.length; i++){
@@ -66,6 +66,7 @@ function addItemToCart(title, price, imageSrc){
             return
         }
     }
+
     let cartRowContent = `
     <div class="cart-item cart-column">
         <img class="cart-item-image" src="${imageSrc}" width="100" height="100" alt="album">
@@ -92,7 +93,7 @@ function purchaseClicked(){
     updatedCartTotal()
 }
 
-// getting all the totals in the cart and doin the neeeded calculations 
+// getting all the totals in the cart and doing the needed calculations 
 function updatedCartTotal() {
     let cartItemContainer = document.getElementsByClassName('cart-items')[0]
     let cartRows = cartItemContainer.getElementsByClassName('cart-row')
